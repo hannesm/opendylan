@@ -1561,6 +1561,7 @@ define method replace-call-function!
     (call :: <function-call>, temp :: <value-reference>) => ()
   remove-user!(call.function, call);
   add-user!(temp, call);
+  error("don't want to be here");
   call.function := temp
 end method;
 
